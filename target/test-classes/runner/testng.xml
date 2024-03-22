@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AmazonCheckoutTests">
+
+    
+    <test name="CheckoutTests">
+        <classes>
+            <class name="tests.AddToCartTest"/>
+            <class name="tests.UpdateShippingInfoTest"/>
+            <class name="tests.RemoveFromCartTest"/>
+            
+        </classes>
+    </test>
+
+</suite>
