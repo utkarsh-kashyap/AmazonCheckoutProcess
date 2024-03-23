@@ -11,12 +11,18 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
+
+/**
+ * BaseClass for test suite setup.
+ * Initializes WebDriver, baseURL, and waits based on configuration properties.
+ */
+
 public class BaseClass {
     protected static WebDriver driver;
     protected String baseURL;
     protected int waitTimeInSeconds;
 
-    @BeforeSuite
+    @BeforeSuite()
     public void beforeSuite() {
         DriverSetup.browserSetup(getProperty("browser"), getProperty("headless"));
         waitTimeInSeconds = Integer.parseInt(getProperty("waitTime"));
@@ -24,17 +30,23 @@ public class BaseClass {
 
     @BeforeClass
     public void beforeClass() {
+    	// Initialize WebDriver and navigate to the baseURL
         driver = DriverSetup.getDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitTimeInSeconds));
         baseURL = getProperty("baseURL");
+        driver.get(baseURL);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitTimeInSeconds));
+        System.out.println("Successfully navigated to "+ baseURL);
     }
 
     @AfterSuite
     public void afterSuite() {
+    	//Teardown method for WebDriver
         DriverSetup.quitDriver();
     }
 
     public String getProperty(String key) {
+    	//Method to read properties from config
         Properties config = new Properties();
         FileInputStream fis = null;
         String value = null;

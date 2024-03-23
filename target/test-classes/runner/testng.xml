@@ -4,9 +4,9 @@
     
     <test name="CheckoutTests">
         <classes>
-            <class name="tests.AddToCartTest"/>
-            <class name="tests.UpdateShippingInfoTest"/>
-            <class name="tests.RemoveFromCartTest"/>
+            <class name="com.amazon.tests.AddToCartTest"/>
+            <class name="com.amazon.tests.UpdateShippingInfoTest"/>
+            <class name="com.amazon.tests.RemoveFromCartTest"/>
             
         </classes>
     </test>
