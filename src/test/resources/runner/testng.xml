@@ -1,14 +1,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="AmazonCheckoutTests">
 
-    
-    <test name="CheckoutTests">
-        <classes>
-            <class name="com.amazon.tests.AddToCartTest"/>
-            <class name="com.amazon.tests.UpdateShippingInfoTest"/>
-            <class name="com.amazon.tests.RemoveFromCartTest"/>
-            
-        </classes>
-    </test>
+	<listeners>
+		<listener class-name="com.listeners.ListenerClass" />
+	</listeners>
+
+	<test name="CheckoutTests">
+		<classes>
+			<class name="com.amazon.tests.AddToCartTest" />
+			<class name="com.amazon.tests.UpdateShippingInfoTest" />
+			<class name="com.amazon.tests.RemoveFromCartTest" />
+		</classes>
+	</test>
 
 </suite>

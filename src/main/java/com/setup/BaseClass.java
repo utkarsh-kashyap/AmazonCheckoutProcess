@@ -9,7 +9,11 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.listeners.Reporting;
 
 
 /**
@@ -21,6 +25,7 @@ public class BaseClass {
     protected static WebDriver driver;
     protected String baseURL;
     protected int waitTimeInSeconds;
+    protected ExtentTest test;
 
     @BeforeSuite()
     public void beforeSuite() {
@@ -37,6 +42,16 @@ public class BaseClass {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitTimeInSeconds));
         System.out.println("Successfully navigated to "+ baseURL);
+        
+    }
+    
+    @BeforeMethod
+    public void beforeMethod(java.lang.reflect.Method method) {
+        // Set the ExtentTest instance with the current method name
+      
+        // Set the ExtentTest instance in the Reporting class
+        Reporting.setExtentTest(test);
+        //test = ExtentManager.getInstance().createTest(method.getName());
     }
 
     @AfterSuite
@@ -71,4 +86,5 @@ public class BaseClass {
 
         return value;
     }
+    
 }
