@@ -26,7 +26,6 @@ public class AddToCartTest extends BaseClass {
 		amazonHomePage.enterProductNameInSearchBox(TestConstants.PRODUCT_NAME_CLOUD_ATLAS);
 		amazonHomePage.clickOnSearchButton();
 		productListingPage.clickOnFirstSearchResult();
-		productListingPage.switchToProductDetailPageWindow();
 		String initialCartCount = productDetailsPage.getCartCount();
 		productDetailsPage.clickOnAddToCartButton();
 		String finalCartCount = productDetailsPage.getCartCount();

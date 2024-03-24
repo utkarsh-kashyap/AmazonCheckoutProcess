@@ -18,6 +18,9 @@ WebDriver driver;
 	@FindBy(xpath = "//input[@id='add-to-cart-button']")
 	private WebElement addToCartButton;
 	
+	@FindBy(xpath = "//input[@id='buy-now-button']")
+	private WebElement buyNowButton;
+	
 	@FindBy(xpath = "//a[normalize-space()='Go to Cart' and @data-csa-c-slot-id='sw-gtc']")
 	private WebElement goToCartButton;
 	
@@ -42,5 +45,9 @@ WebDriver driver;
 	
 	public boolean isItemAddedToCartMessageDisplayed() {
 		return ReusableMethods.isElementDisplayed(addedCartText, "Added To Cart Message");
+	}
+	
+	public void clickOnBuyNowButton() {
+		ReusableMethods.clickElement(buyNowButton, "buy Now Button");
 	}
 }

@@ -29,12 +29,10 @@ public class RemoveFromCartTest extends BaseClass {
 		amazonHomePage.enterProductNameInSearchBox(TestConstants.PRODUCT_NAME_CLOUD_ATLAS);
 		amazonHomePage.clickOnSearchButton();
 		productListingPage.clickOnFirstSearchResult();
-		productListingPage.switchToProductDetailPageWindow();
 		productDetailsPage.clickOnAddToCartButton();
-		amazonHomePage.enterProductNameInSearchBox(TestConstants.PRODUCT_NAME_GONE_GIRL);
+		amazonHomePage.enterProductNameInSearchBox(TestConstants.PRODUCT_NAME_ATOMIC_HABITSL);
 		amazonHomePage.clickOnSearchButton();
 		productListingPage.clickOnFirstSearchResult();
-		productListingPage.switchToProductDetailPageWindow();
 		productDetailsPage.clickOnAddToCartButton();
 		productDetailsPage.clickOnGoToCartButton();
 		

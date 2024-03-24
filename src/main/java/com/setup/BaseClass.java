@@ -40,8 +40,8 @@ public class BaseClass {
     	DriverSetup.browserSetup(getProperty("browser"), getProperty("headless"));
         driver = DriverSetup.getDriver();
         baseURL = getProperty("baseURL");
-        driver.get(baseURL);
         driver.manage().window().maximize();
+        driver.get(baseURL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitTimeInSeconds));
         
     }
@@ -68,7 +68,7 @@ public class BaseClass {
         DriverSetup.quitDriver();
     }
 
-    public String getProperty(String key) {
+    public static String getProperty(String key) {
     	//Method to read properties from config
         Properties config = new Properties();
         FileInputStream fis = null;
