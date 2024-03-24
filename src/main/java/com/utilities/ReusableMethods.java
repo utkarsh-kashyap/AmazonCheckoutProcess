@@ -93,11 +93,12 @@ public class ReusableMethods extends BaseClass{
 	}
 	
 	public static void switchToWindowHandle() {
+		WaitClass.waitForNewWindowToAppear();
 		for(String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 			driver.manage().window().maximize();
-			Reporting.logInfo("Switched to window handle");
 		}
+		Reporting.logInfo("Switched to window handle");
 	}
 	
 	public static String getCurrentDateTime() {

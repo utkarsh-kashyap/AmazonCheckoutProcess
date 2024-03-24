@@ -22,5 +22,9 @@ WebDriver driver;
 	public void clickOnFirstSearchResult() {
 		ReusableMethods.clickElement(firstResultImage, "Product");
 	}
+	
+	public void switchToProductDetailPageWindow() {
+		ReusableMethods.switchToWindowHandle();
+	}
 
 }

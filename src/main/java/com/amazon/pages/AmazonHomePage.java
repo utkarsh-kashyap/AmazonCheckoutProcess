@@ -4,7 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
+import com.listeners.Reporting;
+import com.setup.BaseClass;
 import com.utilities.ReusableMethods;
 import com.utilities.TestConstants;
 
@@ -21,6 +24,12 @@ public class AmazonHomePage  {
 	
 	@FindBy(xpath = "//input[@type='submit' and @value='Go']")
 	private WebElement searchSubmitButton;
+	
+	public void navigateToBaseURL() {
+		String currentURL = driver.getCurrentUrl();
+		Assert.assertEquals(currentURL, BaseClass.baseURL);
+		Reporting.logInfo("Navigated to "+currentURL+" Successfully");
+	}
 	
 	
 	public void enterProductNameInSearchBox() {

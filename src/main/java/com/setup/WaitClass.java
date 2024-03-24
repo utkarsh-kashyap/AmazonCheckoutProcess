@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,6 +30,15 @@ public class WaitClass extends BaseClass {
 	public static void waitForTextToAppear(WebElement element, String str) throws Error{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.textToBePresentInElement(element, str));
+	}
+	
+	public static void waitForNewWindowToAppear() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver driver) {
+                return driver.getWindowHandles().size() > 1;
+            }
+        });
 	}
 
 }

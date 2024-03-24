@@ -23,7 +23,7 @@ import com.listeners.Reporting;
 
 public class BaseClass {
     protected static WebDriver driver;
-    protected String baseURL;
+    public static String baseURL;
     protected int waitTimeInSeconds;
     protected ExtentTest test;
 
@@ -41,13 +41,11 @@ public class BaseClass {
         driver.get(baseURL);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitTimeInSeconds));
-        System.out.println("Successfully navigated to "+ baseURL);
         
     }
     
     @BeforeMethod
     public void beforeMethod(java.lang.reflect.Method method) {
-        // Set the ExtentTest instance with the current method name
       
         // Set the ExtentTest instance in the Reporting class
         Reporting.setExtentTest(test);
