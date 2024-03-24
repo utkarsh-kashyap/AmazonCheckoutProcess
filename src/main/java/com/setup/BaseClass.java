@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -29,13 +30,14 @@ public class BaseClass {
 
     @BeforeSuite()
     public void beforeSuite() {
-        DriverSetup.browserSetup(getProperty("browser"), getProperty("headless"));
+        
         waitTimeInSeconds = Integer.parseInt(getProperty("waitTime"));
     }
 
     @BeforeClass
     public void beforeClass() {
     	// Initialize WebDriver and navigate to the baseURL
+    	DriverSetup.browserSetup(getProperty("browser"), getProperty("headless"));
         driver = DriverSetup.getDriver();
         baseURL = getProperty("baseURL");
         driver.get(baseURL);
@@ -50,6 +52,14 @@ public class BaseClass {
         // Set the ExtentTest instance in the Reporting class
         Reporting.setExtentTest(test);
         //test = ExtentManager.getInstance().createTest(method.getName());
+    }
+    
+    @AfterClass
+    public void afterClass() {
+        // Close the WebDriver after each test class
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
     @AfterSuite

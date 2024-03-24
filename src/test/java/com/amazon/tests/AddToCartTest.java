@@ -7,6 +7,7 @@ import com.amazon.pages.AmazonHomePage;
 import com.amazon.pages.ProductDetailsPage;
 import com.amazon.pages.ProductListingPage;
 import com.setup.BaseClass;
+import com.utilities.TestConstants;
 
 public class AddToCartTest extends BaseClass {
 	
@@ -21,8 +22,8 @@ public class AddToCartTest extends BaseClass {
 		productListingPage = new ProductListingPage(driver);
 		productDetailsPage = new ProductDetailsPage(driver);
 		
-		amazonHomePage.navigateToBaseURL();
-		amazonHomePage.enterProductNameInSearchBox();
+		amazonHomePage.navigatedToBaseURL();
+		amazonHomePage.enterProductNameInSearchBox(TestConstants.PRODUCT_NAME_CLOUD_ATLAS);
 		amazonHomePage.clickOnSearchButton();
 		productListingPage.clickOnFirstSearchResult();
 		productListingPage.switchToProductDetailPageWindow();

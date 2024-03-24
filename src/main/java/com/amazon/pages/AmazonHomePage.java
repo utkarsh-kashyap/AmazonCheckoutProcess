@@ -9,7 +9,6 @@ import org.testng.Assert;
 import com.listeners.Reporting;
 import com.setup.BaseClass;
 import com.utilities.ReusableMethods;
-import com.utilities.TestConstants;
 
 public class AmazonHomePage  {
 	WebDriver driver;
@@ -25,15 +24,15 @@ public class AmazonHomePage  {
 	@FindBy(xpath = "//input[@type='submit' and @value='Go']")
 	private WebElement searchSubmitButton;
 	
-	public void navigateToBaseURL() {
+	public void navigatedToBaseURL() {
 		String currentURL = driver.getCurrentUrl();
 		Assert.assertEquals(currentURL, BaseClass.baseURL);
 		Reporting.logInfo("Navigated to "+currentURL+" Successfully");
 	}
 	
 	
-	public void enterProductNameInSearchBox() {
-		ReusableMethods.enterText(searchTextbox, TestConstants.PRODUCT_NAME, "Product Name");
+	public void enterProductNameInSearchBox(String productName) {
+		ReusableMethods.enterText(searchTextbox, productName, "Search Box");
 	}
 	
 	public void clickOnSearchButton() {

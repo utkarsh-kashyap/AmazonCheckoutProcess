@@ -18,6 +18,9 @@ WebDriver driver;
 	@FindBy(xpath = "//input[@id='add-to-cart-button']")
 	private WebElement addToCartButton;
 	
+	@FindBy(xpath = "//a[normalize-space()='Go to Cart' and @data-csa-c-slot-id='sw-gtc']")
+	private WebElement goToCartButton;
+	
 	@FindBy(xpath = "//span[@id='nav-cart-count']")
 	private WebElement cartCount;
 	
@@ -27,6 +30,10 @@ WebDriver driver;
 	
 	public void clickOnAddToCartButton() {
 		ReusableMethods.clickElement(addToCartButton, "Add To Cart Button");
+	}
+	
+	public void clickOnGoToCartButton() {
+		ReusableMethods.clickElement(goToCartButton, "Go To Cart Button");
 	}
 	
 	public String getCartCount() {
