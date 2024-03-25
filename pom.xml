@@ -12,6 +12,22 @@
 		scenarios that users may encounter when adding items to their cart,
 		updating shipping information, and completing purchases.</description>
 
+	<build>
+		<plugins>
+			<!-- Surefire plugin configuration -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/resources/runner/testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 		<!-- Selenium WebDriver -->
 		<dependency>
@@ -25,7 +41,8 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.9.0</version>
-			<scope>test</scope>
+			<!--<scope>test</scope>-->
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -53,8 +70,6 @@
 			<artifactId>commons-collections4</artifactId>
 			<version>4.4</version>
 		</dependency>
-
-	
 
 
 	</dependencies>

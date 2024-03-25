@@ -1,0 +1,4 @@
+com\amazon\tests\AddToCartTest.class
+com\amazon\tests\RemoveFromCartTest.class
+com\amazon\tests\UpdateShippingInfoTest.class
+com\amazon\tests\NegativeTest.class
