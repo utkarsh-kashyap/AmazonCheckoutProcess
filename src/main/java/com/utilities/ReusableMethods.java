@@ -15,6 +15,23 @@ import com.setup.WaitClass;
 
 public class ReusableMethods extends BaseClass{
 	
+	public long measurePageLoadTime(String url) {
+	    long startTime = System.currentTimeMillis();
+	    driver.get(url);
+	    long endTime = System.currentTimeMillis();
+	    long pageLoadTime = endTime - startTime;
+	    return pageLoadTime;
+	}
+	
+	public long measureResponseTime(WebElement element) {
+	    long startTime = System.currentTimeMillis();
+	    element.click(); // Perform the action
+	    long endTime = System.currentTimeMillis();
+	    long responseTime = endTime - startTime;
+	    return responseTime;
+	}
+	
+	
 	public static void clickElement(WebElement element, String elementname) {
 		WaitClass.waitForVisibilityOfElement(element);
 		element.click();

@@ -2,8 +2,8 @@ package com.listeners;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import org.testng.Assert;
-import org.testng.Reporter;
+
+import org.apache.logging.log4j.LogManager;
 
 public class Reporting {
 
@@ -19,8 +19,10 @@ public class Reporting {
         return extentTestThreadLocal.get();
     }
 
+    private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(Reporting.class);
+
     public static void logInfo(String message) {
-        Reporter.log(message);
+        logger.info(message);
         ExtentTest extentTest = getExtentTest();
         if (extentTest != null) {
             extentTest.log(Status.INFO, message);
@@ -30,7 +32,7 @@ public class Reporting {
     }
 
     public static void logPass(String message) {
-        Reporter.log(message);
+        logger.info(message);
         ExtentTest extentTest = getExtentTest();
         if (extentTest != null) {
             extentTest.log(Status.PASS, message);
@@ -40,11 +42,10 @@ public class Reporting {
     }
 
     public static void logFail(String message) {
-        Reporter.log(message);
+        logger.error(message);
         ExtentTest extentTest = getExtentTest();
         if (extentTest != null) {
             extentTest.log(Status.FAIL, message);
-            Assert.fail(message);
         } else {
             throw new IllegalStateException("ExtentTest instance is not initialized.");
         }

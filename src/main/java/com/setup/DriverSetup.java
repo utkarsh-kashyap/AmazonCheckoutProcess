@@ -8,8 +8,6 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class DriverSetup {
     public static WebDriver driver;
     
@@ -24,7 +22,7 @@ public class DriverSetup {
             case "chrome":
             	//Google Chrome Browser setup with headless option
                 if (headless.equalsIgnoreCase("true")) {
-                	WebDriverManager.chromedriver().setup();
+                	//WebDriverManager.chromedriver().setup();
                    ChromeOptions chromeOptions = new ChromeOptions();
                    
                    chromeOptions.addArguments("--headless=new");
@@ -32,29 +30,29 @@ public class DriverSetup {
                 }
               //Google Chrome Browser setup without headless option
                 else {
-                	WebDriverManager.chromedriver().setup();
+                	//WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                 }
                 break;
             case "firefox":
             	//Mozilla Firefox Browser setup with headless option
             	if (headless.equalsIgnoreCase("true")) {
-                	WebDriverManager.firefoxdriver().setup();
+                	//WebDriverManager.firefoxdriver().setup();
                    FirefoxOptions firefoxOptions = new FirefoxOptions();
                    
-                   firefoxOptions.addArguments("--headless");
-                   driver = new FirefoxDriver(firefoxOptions);
+                   firefoxOptions.addArguments("-headless");
+                    driver = new FirefoxDriver(firefoxOptions);
                 }
             	//Mozilla Firefox Browser setup without headless option
                 else {
-                	WebDriverManager.firefoxdriver().setup();
+                	//WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                 }
                 break;
             case "edge":
                 // Microsoft Edge Browser setup with headless option
             	if (headless.equalsIgnoreCase("true")) {
-                	WebDriverManager.edgedriver().setup();
+                	//WebDriverManager.edgedriver().setup();
                    EdgeOptions edgeOptions = new EdgeOptions();
                    
                    edgeOptions.addArguments("--headless");
@@ -62,7 +60,7 @@ public class DriverSetup {
                 }
             	// Microsoft Edge Browser setup without headless option
                 else {
-                	WebDriverManager.edgedriver().setup();
+                	//WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                 }
                 break;

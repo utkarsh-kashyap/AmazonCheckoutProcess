@@ -74,7 +74,7 @@ WebDriver driver;
 		try {
 			clickOnNotNowLink();
 		} catch (Exception e) {
-			System.out.println("Add Mobile Number Message Not Present while Login");
+			System.out.println("00:00:00.000 INFO -  Add Mobile alert not present at login");
 		}
 	}
 
