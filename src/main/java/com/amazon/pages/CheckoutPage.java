@@ -57,6 +57,19 @@ WebDriver driver;
 	@FindBy(xpath = "//li[@class='displayAddressLI displayAddressAddressLine1']")
 	private WebElement li_AddressLine1;
 	
+	@FindBy(xpath = "//div[@id='address-ui-widgets-enterAddressPostalCode-full-validation-alerts']")
+	private WebElement shippingAddressErrorMessage;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter Code']")
+	private WebElement giftCodeField;
+	
+	@FindBy(xpath = "//input[@value='Apply']")
+	private WebElement applyGiftCodeButton;
+	
+	@FindBy(xpath = "//div[@id='pmts-claim-code-error-messages']")
+	private WebElement invalidGiftCodeAlert;
+	
+	
 	public void clickOnDeleteItemButton() {
 		ReusableMethods.clickElement(itemDeleteButton, "Delete Item Button");
 	}
@@ -115,6 +128,22 @@ WebDriver driver;
 	
 	public String getAddressLine1FromAddress() {
 		return ReusableMethods.getElementText(li_AddressLine1, "Address Line 1");
+	}
+
+	public boolean isShippingAddressErrorDisplayed() {
+		return ReusableMethods.isElementDisplayed(shippingAddressErrorMessage, "Shipping Address Error Message");
+	}
+	
+	public void enterGiftCode(String str) {
+		ReusableMethods.enterText(giftCodeField, str, "Gift Code Field");
+	}
+	
+	public void clickOnApplyGiftCode() {
+		ReusableMethods.clickElement(applyGiftCodeButton, "Apply Gift Code");
+	}
+	
+	public boolean isGiftCodeErrorDisplayed() {
+		return ReusableMethods.isElementDisplayed(invalidGiftCodeAlert, "Invalid Gift Code");
 	}
 
 }

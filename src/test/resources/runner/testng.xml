@@ -10,6 +10,7 @@
 			<class name="com.amazon.tests.AddToCartTest" />
 			<class name="com.amazon.tests.UpdateShippingInfoTest" />
 			<class name="com.amazon.tests.RemoveFromCartTest" />
+			<class name="com.amazon.tests.NegativeTest" />
 		</classes>
 	</test>
 

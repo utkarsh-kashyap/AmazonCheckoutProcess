@@ -24,7 +24,13 @@ public class AmazonHomePage  {
 	@FindBy(xpath = "//input[@type='submit' and @value='Go']")
 	private WebElement searchSubmitButton;
 	
+	@FindBy(xpath = "//a[@id='nav-cart']")
+	private WebElement cartButton;
+	
+	
+	
 	public void navigatedToBaseURL() {
+		driver.get(BaseClass.baseURL);
 		String currentURL = driver.getCurrentUrl();
 		Assert.assertEquals(currentURL, BaseClass.baseURL);
 		Reporting.logInfo("Navigated to "+currentURL+" Successfully");
@@ -37,6 +43,10 @@ public class AmazonHomePage  {
 	
 	public void clickOnSearchButton() {
 		ReusableMethods.clickElement(searchSubmitButton, "Submit Search Button");
+	}
+	
+	public void clickOnCartButton() {
+		ReusableMethods.clickElement(cartButton, "Cart Button");
 	}
 
 }

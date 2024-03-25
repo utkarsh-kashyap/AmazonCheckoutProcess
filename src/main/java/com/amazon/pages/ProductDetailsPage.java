@@ -30,6 +30,9 @@ WebDriver driver;
 	@FindBy(xpath = "//h1[normalize-space()='Added to Cart']")
 	private WebElement addedCartText;
 	
+	@FindBy(xpath = "//input[@name='proceedToRetailCheckout']")
+	private WebElement proceedToCheckout;
+	
 	
 	public void clickOnAddToCartButton() {
 		ReusableMethods.clickElement(addToCartButton, "Add To Cart Button");
@@ -49,5 +52,9 @@ WebDriver driver;
 	
 	public void clickOnBuyNowButton() {
 		ReusableMethods.clickElement(buyNowButton, "buy Now Button");
+	}
+	
+	public void clickOnProceedToCheckout() {
+		ReusableMethods.clickElement(proceedToCheckout, "Proceed To Checkout");
 	}
 }

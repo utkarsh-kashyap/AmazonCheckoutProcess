@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Navigated to https://www.amazon.com/ Successfully]]>
@@ -148,21 +148,108 @@
     <line>
       <![CDATA[Test passed]]>
     </line>
+    <line>
+      <![CDATA[Hover over Sign In Button Successfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Sign In Button]]>
+    </line>
+    <line>
+      <![CDATA[Entered inlet.amazon@gmail.com in Email Field]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Continue Button]]>
+    </line>
+    <line>
+      <![CDATA[Entered Login@amazon99 in Password Field]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on LoginIn]]>
+    </line>
+    <line>
+      <![CDATA[Entered cloud atlas by liam callanan in Search Box]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Submit Search Button]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Product]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on buy Now Button]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Change Address Link]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Add New Address]]>
+    </line>
+    <line>
+      <![CDATA[Cleared text in Full Name]]>
+    </line>
+    <line>
+      <![CDATA[Entered Auto in Full Name]]>
+    </line>
+    <line>
+      <![CDATA[Entered 666666 in Phone Number]]>
+    </line>
+    <line>
+      <![CDATA[Entered TEST in AddressLine]]>
+    </line>
+    <line>
+      <![CDATA[Entered SACRAMENTO in City]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on State]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on California]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Use This Address Link]]>
+    </line>
+    <line>
+      <![CDATA[Shipping Address Error Message is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Test passed]]>
+    </line>
+    <line>
+      <![CDATA[Navigated to https://www.amazon.com/ Successfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Cart Button]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Proceed To Checkout]]>
+    </line>
+    <line>
+      <![CDATA[Entered CODE in Gift Code Field]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Apply Gift Code]]>
+    </line>
+    <line>
+      <![CDATA[Invalid Gift Code is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Test passed]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-03-25T12:08:51 IST" name="AmazonCheckoutTests" finished-at="2024-03-25T12:09:59 IST" duration-ms="68773">
+  <suite started-at="2024-03-25T20:52:20 IST" name="AmazonCheckoutTests" finished-at="2024-03-25T20:54:23 IST" duration-ms="123196">
     <groups>
     </groups>
-    <test started-at="2024-03-25T12:08:51 IST" name="CheckoutTests" finished-at="2024-03-25T12:09:59 IST" duration-ms="68773">
+    <test started-at="2024-03-25T20:52:20 IST" name="CheckoutTests" finished-at="2024-03-25T20:54:23 IST" duration-ms="123196">
       <class name="com.amazon.tests.AddToCartTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.amazon.tests.AddToCartTest@45d84a20]" started-at="2024-03-25T12:08:51 IST" name="beforeSuite" finished-at="2024-03-25T12:08:51 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.amazon.tests.AddToCartTest@4a8355dd]" started-at="2024-03-25T20:52:20 IST" name="beforeSuite" finished-at="2024-03-25T20:52:20 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.amazon.tests.AddToCartTest@45d84a20]" started-at="2024-03-25T12:08:51 IST" name="beforeClass" finished-at="2024-03-25T12:08:54 IST" duration-ms="3857" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.amazon.tests.AddToCartTest@4a8355dd]" started-at="2024-03-25T20:52:20 IST" name="beforeClass" finished-at="2024-03-25T20:52:25 IST" duration-ms="4498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.amazon.tests.AddToCartTest@45d84a20]" started-at="2024-03-25T12:08:54 IST" name="beforeMethod" finished-at="2024-03-25T12:08:54 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.amazon.tests.AddToCartTest@4a8355dd]" started-at="2024-03-25T20:52:25 IST" name="beforeMethod" finished-at="2024-03-25T20:52:25 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -173,7 +260,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUserCanAddItemToCart()[pri:1, instance:com.amazon.tests.AddToCartTest@45d84a20]" started-at="2024-03-25T12:08:54 IST" name="verifyUserCanAddItemToCart" finished-at="2024-03-25T12:09:02 IST" duration-ms="7919" status="PASS">
+        <test-method signature="verifyUserCanAddItemToCart()[pri:1, instance:com.amazon.tests.AddToCartTest@4a8355dd]" started-at="2024-03-25T20:52:25 IST" name="verifyUserCanAddItemToCart" finished-at="2024-03-25T20:52:36 IST" duration-ms="11106" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Navigated to https://www.amazon.com/ Successfully]]>
@@ -204,32 +291,21 @@
             </line>
           </reporter-output>
         </test-method> <!-- verifyUserCanAddItemToCart -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.amazon.tests.AddToCartTest@45d84a20]" started-at="2024-03-25T12:09:02 IST" name="afterClass" finished-at="2024-03-25T12:09:03 IST" duration-ms="130" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.amazon.tests.AddToCartTest@4a8355dd]" started-at="2024-03-25T20:52:36 IST" name="afterClass" finished-at="2024-03-25T20:52:36 IST" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.amazon.tests.AddToCartTest@45d84a20]" started-at="2024-03-25T12:10:00 IST" name="afterSuite" finished-at="2024-03-25T12:10:00 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.amazon.tests.AddToCartTest@4a8355dd]" started-at="2024-03-25T20:54:24 IST" name="afterSuite" finished-at="2024-03-25T20:54:24 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.amazon.tests.AddToCartTest -->
       <class name="com.amazon.tests.UpdateShippingInfoTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.amazon.tests.UpdateShippingInfoTest@66982506]" started-at="2024-03-25T12:09:03 IST" name="beforeClass" finished-at="2024-03-25T12:09:06 IST" duration-ms="3010" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.amazon.tests.UpdateShippingInfoTest@4bdeaabb]" started-at="2024-03-25T20:52:36 IST" name="beforeClass" finished-at="2024-03-25T20:52:39 IST" duration-ms="2980" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.amazon.tests.UpdateShippingInfoTest@66982506]" started-at="2024-03-25T12:09:06 IST" name="beforeMethod" finished-at="2024-03-25T12:09:06 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.amazon.tests.UpdateShippingInfoTest.VerifyUserCanUpdateShippingInformation()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VerifyUserCanUpdateShippingInformation()[pri:1, instance:com.amazon.tests.UpdateShippingInfoTest@66982506]" started-at="2024-03-25T12:09:06 IST" name="VerifyUserCanUpdateShippingInformation" finished-at="2024-03-25T12:09:40 IST" duration-ms="34265" status="PASS">
+        <test-method signature="VerifyUserCanUpdateShippingInformation()[pri:1, instance:com.amazon.tests.UpdateShippingInfoTest@4bdeaabb]" started-at="2024-03-25T20:52:39 IST" name="VerifyUserCanUpdateShippingInformation" finished-at="2024-03-25T20:53:14 IST" duration-ms="35055" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Hover over Sign In Button Successfully]]>
@@ -305,28 +381,155 @@
             </line>
           </reporter-output>
         </test-method> <!-- VerifyUserCanUpdateShippingInformation -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.amazon.tests.UpdateShippingInfoTest@66982506]" started-at="2024-03-25T12:09:40 IST" name="afterClass" finished-at="2024-03-25T12:09:40 IST" duration-ms="166" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.amazon.tests.UpdateShippingInfoTest -->
-      <class name="com.amazon.tests.RemoveFromCartTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.amazon.tests.RemoveFromCartTest@70cf32e3]" started-at="2024-03-25T12:09:40 IST" name="beforeClass" finished-at="2024-03-25T12:09:42 IST" duration-ms="2325" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.amazon.tests.RemoveFromCartTest@70cf32e3]" started-at="2024-03-25T12:09:42 IST" name="beforeMethod" finished-at="2024-03-25T12:09:42 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.amazon.tests.UpdateShippingInfoTest@4bdeaabb]" started-at="2024-03-25T20:52:39 IST" name="beforeMethod" finished-at="2024-03-25T20:52:39 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.amazon.tests.RemoveFromCartTest.verifyUserCanRemoveItemFromCart()]]>
+                <![CDATA[public void com.amazon.tests.UpdateShippingInfoTest.VerifyUserCanUpdateShippingInformation()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUserCanRemoveItemFromCart()[pri:1, instance:com.amazon.tests.RemoveFromCartTest@70cf32e3]" started-at="2024-03-25T12:09:42 IST" name="verifyUserCanRemoveItemFromCart" finished-at="2024-03-25T12:09:59 IST" duration-ms="16919" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.amazon.tests.UpdateShippingInfoTest@4bdeaabb]" started-at="2024-03-25T20:53:14 IST" name="afterClass" finished-at="2024-03-25T20:53:14 IST" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.amazon.tests.UpdateShippingInfoTest -->
+      <class name="com.amazon.tests.NegativeTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.amazon.tests.NegativeTest@65987993]" started-at="2024-03-25T20:53:43 IST" name="beforeClass" finished-at="2024-03-25T20:53:45 IST" duration-ms="2513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="verifyEmptyShippingAddressFieldsError()[pri:1, instance:com.amazon.tests.NegativeTest@65987993]" started-at="2024-03-25T20:53:45 IST" name="verifyEmptyShippingAddressFieldsError" finished-at="2024-03-25T20:54:15 IST" duration-ms="29885" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Hover over Sign In Button Successfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Sign In Button]]>
+            </line>
+            <line>
+              <![CDATA[Entered inlet.amazon@gmail.com in Email Field]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Continue Button]]>
+            </line>
+            <line>
+              <![CDATA[Entered Login@amazon99 in Password Field]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on LoginIn]]>
+            </line>
+            <line>
+              <![CDATA[Entered cloud atlas by liam callanan in Search Box]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Submit Search Button]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Product]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on buy Now Button]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Change Address Link]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Add New Address]]>
+            </line>
+            <line>
+              <![CDATA[Cleared text in Full Name]]>
+            </line>
+            <line>
+              <![CDATA[Entered Auto in Full Name]]>
+            </line>
+            <line>
+              <![CDATA[Entered 666666 in Phone Number]]>
+            </line>
+            <line>
+              <![CDATA[Entered TEST in AddressLine]]>
+            </line>
+            <line>
+              <![CDATA[Entered SACRAMENTO in City]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on State]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on California]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Use This Address Link]]>
+            </line>
+            <line>
+              <![CDATA[Shipping Address Error Message is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Test passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyEmptyShippingAddressFieldsError -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.amazon.tests.NegativeTest@65987993]" started-at="2024-03-25T20:53:45 IST" name="beforeMethod" finished-at="2024-03-25T20:53:45 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.amazon.tests.NegativeTest.verifyEmptyShippingAddressFieldsError()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyInvalidPromoCodeError()[pri:2, instance:com.amazon.tests.NegativeTest@65987993]" started-at="2024-03-25T20:54:15 IST" name="verifyInvalidPromoCodeError" finished-at="2024-03-25T20:54:23 IST" duration-ms="8160" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Navigated to https://www.amazon.com/ Successfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Cart Button]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Proceed To Checkout]]>
+            </line>
+            <line>
+              <![CDATA[Entered CODE in Gift Code Field]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Apply Gift Code]]>
+            </line>
+            <line>
+              <![CDATA[Invalid Gift Code is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Test passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidPromoCodeError -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.amazon.tests.NegativeTest@65987993]" started-at="2024-03-25T20:54:15 IST" name="beforeMethod" finished-at="2024-03-25T20:54:15 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.amazon.tests.NegativeTest.verifyInvalidPromoCodeError()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.amazon.tests.NegativeTest@65987993]" started-at="2024-03-25T20:54:23 IST" name="afterClass" finished-at="2024-03-25T20:54:23 IST" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.amazon.tests.NegativeTest -->
+      <class name="com.amazon.tests.RemoveFromCartTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.amazon.tests.RemoveFromCartTest@6c4906d3]" started-at="2024-03-25T20:53:14 IST" name="beforeClass" finished-at="2024-03-25T20:53:17 IST" duration-ms="2802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="verifyUserCanRemoveItemFromCart()[pri:1, instance:com.amazon.tests.RemoveFromCartTest@6c4906d3]" started-at="2024-03-25T20:53:17 IST" name="verifyUserCanRemoveItemFromCart" finished-at="2024-03-25T20:53:42 IST" duration-ms="25371" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Navigated to https://www.amazon.com/ Successfully]]>
@@ -378,7 +581,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- verifyUserCanRemoveItemFromCart -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.amazon.tests.RemoveFromCartTest@70cf32e3]" started-at="2024-03-25T12:09:59 IST" name="afterClass" finished-at="2024-03-25T12:09:59 IST" duration-ms="140" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.amazon.tests.RemoveFromCartTest@6c4906d3]" started-at="2024-03-25T20:53:17 IST" name="beforeMethod" finished-at="2024-03-25T20:53:17 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.amazon.tests.RemoveFromCartTest.verifyUserCanRemoveItemFromCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.amazon.tests.RemoveFromCartTest@6c4906d3]" started-at="2024-03-25T20:53:42 IST" name="afterClass" finished-at="2024-03-25T20:53:43 IST" duration-ms="157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
