@@ -22,7 +22,7 @@ import com.listeners.Reporting;
  */
 
 public class BaseClass {
-	protected static WebDriver driver;
+	public static WebDriver driver;
 	public static String baseURL;
 	protected int waitTimeInSeconds;
 	protected ExtentTest test;

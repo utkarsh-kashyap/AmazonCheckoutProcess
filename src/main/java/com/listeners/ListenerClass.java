@@ -26,11 +26,12 @@ public class ListenerClass implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         Reporting.logFail("Test failed");
+        Reporting.attachScreenshot();
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        Reporting.logInfo("Test skipped");
+        Reporting.logSkip("Test skipped");
     }
 
     @Override
