@@ -36,11 +36,30 @@ The framework uses:
  mvn clean test
  ```
 ## Reporting
-- Test reports are generated using Extent Reports.
-- Custom listeners are configured in the testng.xml file to generate reports.
-- Location of extent test report :-
+Reporting in this project is facilitated by Extent Reports, a versatile reporting library for Java. Extent Reports generates detailed and interactive HTML reports that provide insights into test execution results.
+
+### Setup
+To generate Extent Reports, a custom listener named ListenerClass is configured in the testng.xml file located in the project's src/test/resources/runner directory. This listener captures test results and logs them using Extent Reports. The reports are generated in the test-output folder of the project directory.
 ```bash
 ./test-output/Test-Report-Extent.html
+```
+
+### Features
+- Detailed Reports: Extent Reports provide comprehensive information about test execution, including test case status, duration, and logs.
+- Custom Listener: The ListenerClass captures test results and passes them to the Extent logger for inclusion in the report.
+- Screenshot Attachment: A feature has been added to attach screenshots for failed test cases directly within the report. Screenshots are encoded as Base64 images to enhance visibility and troubleshooting.
+
+## Logging
+Logging in this project is implemented using log4j, a popular logging framework for Java. It provides a flexible logging mechanism that allows logs to be displayed in the console and saved to a log file simultaneously.
+
+### Configuration
+- The log4j configuration is defined in the log4j2.xml file located in the project directory with path as:
+```bash
+/src/test/resources/log4j2.xml
+```
+- In this configuration, logs with a level of info or higher are displayed in the console and saved to the below defined file. The log messages are formatted with a timestamp, log level, and the logger's name.
+```bash
+.log/test.log
 ```
 ## Contributor
 - [Utkarsh Kashyap](https://github.com/utkarsh-kashyap)
