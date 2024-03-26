@@ -39,11 +39,8 @@ WebDriver driver;
 	@FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressCity']")
 	private WebElement city;
 	
-	@FindBy(xpath = "//span[@id='address-ui-widgets-enterAddressStateOrRegion']//span[@data-action='a-dropdown-button']")
+	@FindBy(xpath = "//select[@id='address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId']")
 	private WebElement state;
-	
-	@FindBy(xpath = "//a[@id='address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId_5' and @class='a-dropdown-link']")
-	private WebElement california;
 	
 	@FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressPostalCode']")
 	private WebElement zipCode;
@@ -109,9 +106,8 @@ WebDriver driver;
 		ReusableMethods.enterText(city, str, "City");
 	}
 	
-	public void selectStateOrProvince() {
-		ReusableMethods.clickElement(state, "State");
-		ReusableMethods.clickElement(california, "California");
+	public void selectStateOrProvince(String str) {
+		ReusableMethods.selectByVisibletext(state, str, "State");
 	}
 	
 	public void enterZipCode(String str) {

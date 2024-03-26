@@ -61,7 +61,7 @@ public class NegativeTest extends BaseClass {
 			checkoutPage.enterPhoneNumebr(TestConstants.PHONE_NUMBER);
 			checkoutPage.enterAddressLine1(TestConstants.ADDRESS_LINE1_TEST);
 			checkoutPage.enterCity(TestConstants.CITY_SACRAMENTO);
-			checkoutPage.selectStateOrProvince();
+			checkoutPage.selectStateOrProvince(TestConstants.STATE_CALIFORNIA);
 			checkoutPage.clickOnUseThisAddressLink();
 			
 			// Verify if error message is displayed for empty shipping address fields

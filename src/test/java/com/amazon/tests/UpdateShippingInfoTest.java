@@ -55,7 +55,7 @@ public class UpdateShippingInfoTest extends BaseClass {
 		checkoutPage.enterPhoneNumebr(TestConstants.PHONE_NUMBER);
 		checkoutPage.enterAddressLine1(TestConstants.ADDRESS_LINE1_TEST);
 		checkoutPage.enterCity(TestConstants.CITY_SACRAMENTO);
-		checkoutPage.selectStateOrProvince();
+		checkoutPage.selectStateOrProvince(TestConstants.STATE_CALIFORNIA);
 		checkoutPage.enterZipCode(TestConstants.ZIPCODE_94203);
 		checkoutPage.clickOnUseThisAddressLink();
 		

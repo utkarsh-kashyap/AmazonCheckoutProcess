@@ -81,7 +81,7 @@ public class ReusableMethods extends BaseClass{
 		Reporting.logInfo("Selected "+value+" in the "+elementname);
 	}
 	
-	public static void selectByViibletext(WebElement element, String text, String elementname) {
+	public static void selectByVisibletext(WebElement element, String text, String elementname) {
 		WaitClass.waitForVisibilityOfElement(element);
 		Select dropdown = new Select(element);
 		dropdown.selectByVisibleText(text);
